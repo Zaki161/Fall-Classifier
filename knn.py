@@ -69,6 +69,8 @@ def extract_features_full(df, window_size, shift_size):
     return pd.DataFrame(features)
 
 
+
+
 # Ekstrakcja cech
 window_size = 100 #dlugosc okna -probki 
 shift_size = 10 #co ile przesuwamy
@@ -77,9 +79,12 @@ shift_size = 10 #co ile przesuwamy
 features_df = extract_features_full(df, window_size, shift_size)
 
 
+
 # Podział na dane treningowe i testowe 0.7 i 0.3
 X = features_df[['acc_magnitude_mean', 'gyro_magnitude_mean', 'acc_diff_mean', 'gyro_diff_mean', 'acc_magnitude_std', 'gyro_magnitude_std','age', 'height','weight','gender']]
 y = features_df['fall']
+
+
 X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.3, random_state=42) ##powtarzalność wyników =42
 
 # Normalizacja danych (KNN wymaga standaryzacji)

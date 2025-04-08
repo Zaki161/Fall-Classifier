@@ -1,8 +1,12 @@
+"""
+
+"""
 import pandas as pd
 import glob
 from sklearn.model_selection import train_test_split
 from sklearn.ensemble import RandomForestClassifier
 from sklearn.metrics import classification_report
+from knn import extract_features_full
 
 # Wczytanie wszystkich plików CSV
 files = glob.glob('DANE/*.csv')
@@ -41,10 +45,12 @@ def extract_features(df, window_size, shift_size):
 # Ekstrakcja cech
 window_size = 100
 shift_size = 10
-features_df = extract_features(df, window_size, shift_size)
+# features_df = extract_features(df, window_size, shift_size)
+features_df = extract_features_full(df, window_size, shift_size)
+
 
 # Podział na dane treningowe i testowe
-X = features_df[['acc_magnitude_mean', 'gyro_magnitude_mean', 'acc_diff_mean', 'gyro_diff_mean', 'acc_magnitude_std', 'gyro_magnitude_std']]
+X = features_df[['acc_magnitude_mean', 'gyro_magnitude_mean', 'acc_diff_mean', 'gyro_diff_mean', 'acc_magnitude_std', 'gyro_magnitude_std','age', 'height','weight','gender']]
 y = features_df['fall']
 X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.3, random_state=42)
 
@@ -54,6 +60,7 @@ clf.fit(X_train, y_train)
 
 # Predykcja i ocena
 y_pred = clf.predict(X_test)
+print("Raport RF:")
 print(classification_report(y_test, y_pred))
 
 # Zapisanie przygotowanych danych

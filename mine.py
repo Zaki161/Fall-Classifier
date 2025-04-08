@@ -11,7 +11,7 @@ from zero.merge import SensorDataProcessor
 
 # data_dir = "/Users/zs/.cache/kagglehub/datasets/kmknation/mobifall-dataset-v20/versions/1/MobiFall_Dataset_v2.0/"
 ## UWAGA ZMINENILAS WERSJE NA 3 (SKROCONY KATALOG)  
-data_dir ="/Users/zakiashefa/.cache/kagglehub/datasets/kmknation/mobifall-dataset-v20/versions/1/MobiFall_Dataset_v3.0/"
+data_dir ="/Users/zakiashefa/.cache/kagglehub/datasets/kmknation/mobifall-dataset-v20/versions/1/MobiFall_Dataset_v2.0/"
 
 FILE_COUNT = 0  # Deklarujemy zmienną globalną
 
