@@ -33,13 +33,14 @@ Aby poprawic jakosc modelu zostały stworzone dodatkowe cechy:
 
 Okno przesuwajace ( sliding window) - dzielimy na dlugosc 100 probek i w kazdym oknie obliczamy rozne cechcy. Okno przesuwa się o pewna stala luczbe -10 probek, aby uzyskac plynnosc analizy w czasie rzeczywistym.
 
-
-
-
-## Algorytm
 cechy x:
 'acc_magnitude_mean', 'gyro_magnitude_mean', 'acc_diff_mean', 'gyro_diff_mean', 'acc_magnitude_std', 'gyro_magnitude_std','age', 'height','weight','gender'
 cecha y:'fall'
+
+
+## Algorytm
+z wykorzystaniem sklearn
+
 
 ### RF
 
