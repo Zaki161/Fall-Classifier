@@ -1,5 +1,5 @@
 """
-TAAK
+dziala
 Skrypt do laczenia ze soba danych z plikow acc i gyro oraz dodawaniu odpowienich etykiet 
 """
 import pandas as pd

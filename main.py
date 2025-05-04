@@ -1,5 +1,5 @@
 """
-TAAK
+dziala
 SKrypt do zeglądania głównego katalogu (data_dir), który zawiera dane. 
 Następnie przechodzi do podfolderów, w których znajdują się dane. 
 az znajdzie pliki txt i uzywa klasy SensorDataProcessor z pliku merge.py i tam tworzy jeden pllik
